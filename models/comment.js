@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const { timeStamp } = require('console');
+// const { timeStamp } = require('console');
 
 class Comment extends Model { }
 

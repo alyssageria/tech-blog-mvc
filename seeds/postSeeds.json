@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Lorem ipsum dolor sit amet",
+        "post_content": "Quisque arcu lectus, porttitor feugiat condimentum pharetra, tempor sed ex. Suspendisse lectus magna, feugiat suscipit est et, blandit rhoncus dui. Suspendisse sagittis lectus vitae leo porttitor, ut elementum nisl sagittis.",
+        "user_id": "1"
+    },
+    {
+        "title": "Lorem ipsum dolor sit amet",
+        "post_content": "Quisque arcu lectus, porttitor feugiat condimentum pharetra, tempor sed ex. Suspendisse lectus magna, feugiat suscipit est et, blandit rhoncus dui. Suspendisse sagittis lectus vitae leo porttitor, ut elementum nisl sagittis.",
+        "user_id": "2"
+    },
+    {
+        "title": "Lorem ipsum dolor sit amet",
+        "post_content": "Quisque arcu lectus, porttitor feugiat condimentum pharetra, tempor sed ex. Suspendisse lectus magna, feugiat suscipit est et, blandit rhoncus dui. Suspendisse sagittis lectus vitae leo porttitor, ut elementum nisl sagittis.",
+        "user_id": "3"
+    }
+]
