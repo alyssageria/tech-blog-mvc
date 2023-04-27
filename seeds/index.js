@@ -13,6 +13,7 @@ const seedDatabase = async () => {
     await Comment.bulkCreate(commentData);
 
     console.log('Database seeded successfully!');
+    process.exit(0);
 };
 
 seedDatabase();

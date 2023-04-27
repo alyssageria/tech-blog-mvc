@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+}
+
+.tech-title {
+    padding: 2rem;
+}
+
+.homepage-card {
+    border: 1rem solid black;
+}
