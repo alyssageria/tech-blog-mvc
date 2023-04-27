@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tech Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="stylesheet" href="../../public/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1>The Tech Blog</h1>
+        </header>
+        <nav>
+            {{#if loggedIn}}
+            <a href="/homepage">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+        </nav>
+    </div>
+    <main>
+        {{{body}}}
+    </main>
+</body>
+
+</html>
