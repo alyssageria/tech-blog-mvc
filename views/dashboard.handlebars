@@ -1,0 +1,12 @@
+<h1>My Blog Posts</h1>
+<ul>
+    {{#each posts}}
+    {{#if (eq user_id currentUser.id)}}
+    <li>
+        <h2>{{title}}</h2>
+        <p>{{post_content}}</p>
+        <p>Created at: {{createdAt}}</p>
+    </li>
+    {{/if}}
+    {{/each}}
+</ul>
