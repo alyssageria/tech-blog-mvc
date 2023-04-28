@@ -3,7 +3,7 @@ const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET '/dashboard' -renders the dashboard with existing blog posts
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const currentUser = req.session.user_id;
         const postData = await Post.findAll({

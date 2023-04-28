@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Tech Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <link rel="stylesheet" href="../../public/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
 </head>
 
@@ -17,9 +17,9 @@
         </header>
         <nav>
             {{#if loggedIn}}
-            <a href="/homepage" class="is-size-2">Home</a>
+            <a href="/" class="is-size-2">Home</a>
             <a href="/dashboard" class="is-size-2">Dashboard</a>
-            <a href="/logout" class="is-size-2">Logout</a>
+            <button id="logout">Logout</button>
             {{else}}
             <a href="/login" class="is-size-2 p-2">Login</a>
             <a href="/signup" class="is-size-2 p-2">Signup</a>
@@ -31,7 +31,7 @@
     </main>
 
 
-    {{#if logged_in}}
+    {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{/if}}
 </body>
