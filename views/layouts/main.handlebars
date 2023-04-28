@@ -15,14 +15,14 @@
         <header>
             <h1 class="tech-title has-text-white is-size-1">The Tech Blog</h1>
         </header>
-        <nav>
+        <nav class="is-flex is-align-items-center">
             {{#if loggedIn}}
-            <a href="/" class="is-size-2">Home</a>
-            <a href="/dashboard" class="is-size-2">Dashboard</a>
+            <a href="/" class="is-size-3">Home</a>
+            <a href="/dashboard" class="is-size-3">Dashboard</a>
             <button id="logout">Logout</button>
             {{else}}
-            <a href="/login" class="is-size-2 p-2">Login</a>
-            <a href="/signup" class="is-size-2 p-2">Signup</a>
+            <a href="/login" class="is-size-2 p-3">Login</a>
+            <a href="/signup" class="is-size-2 p-3">Signup</a>
             {{/if}}
         </nav>
     </div>
