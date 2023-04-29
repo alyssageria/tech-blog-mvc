@@ -83,7 +83,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
             plain: true
         });
 
-        res.render('edit-post', {
+        res.render('editBlogPost', {
             post,
             loggedIn: true
         });
