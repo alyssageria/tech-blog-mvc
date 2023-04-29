@@ -1,10 +1,16 @@
 <h1>My Blog Posts</h1>
-<ul>
-    {{#each posts}}
-    <li>
+{{#each posts}}
+<div class="box">
+    <div class="is-flex is-justify-content-space-between has-background-black has-text-white p-2">
         <h2>{{title}}</h2>
-        <p>{{post_content}}</p>
-        <p>Created at: {{createdAt}}</p>
-    </li>
-    {{/each}}
-</ul>
+        <p>Created by {{user.username}} on {{created_at}}</p>
+    </div>
+    <p>{{post_content}}</p>
+</div>
+{{/each}}
+<section class="new-post-section">
+    <button type="submit" class="btn" id="create-new-post">+ Create new post</button>
+</section>
+
+
+<script src="/js/createPost.js"></script>
