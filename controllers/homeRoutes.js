@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
-const withAuth = require('../utils/auth');
 
 // GET '/' - render home page with existing blog posts
 router.get('/', async (req, res) => {
@@ -38,19 +37,6 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
-// router.get("/", async (req, res) => {
-//     try {
-//         const postData = await Post.findAll({
-//             include: [{ model: Comment, include: [User] }, User],
-//         });
-//         const posts = postData.map((post) => post.get({ plain: true }));
-//         res.render("homepage", { posts });
-//     } catch (err) {
-//         console.log(err);
-//         res.status(500).json(err);
-//     }
-// });
 
 // GET '/post/:id' - render single post page
 router.get('/post/:id', async (req, res) => {

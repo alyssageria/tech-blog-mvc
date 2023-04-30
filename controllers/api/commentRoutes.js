@@ -2,10 +2,6 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// POST '/api/comments' - Saves a new comment
-
-// DELETE '/api/comments/:id' - Deletes a comment
-
 // GET '/api/comments - Get all comments
 router.get("/", async (req, res) => {
     try {
