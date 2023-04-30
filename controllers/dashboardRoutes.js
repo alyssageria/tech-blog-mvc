@@ -22,7 +22,6 @@ router.get('/', withAuth, async (req, res) => {
             ]
         });
 
-        console.log(postData);
         const posts = postData.map((post) => post.get({ plain: true }));
 
         console.log(posts)
