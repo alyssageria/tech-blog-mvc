@@ -1,24 +1,23 @@
-<a href="/dashboard" class="go-back"> &larr; Back to dashboard</a>
-
 <article class="new-page">
     <section class="edit-form-page">
         <div class="form-heading">
-            <h2>
-                Edit Post
-            </h2>
+            <h2 class="m-3 is-size-3 has-text-centered">Edit Post</h2>
         </div>
         <div class="form-section">
             <form class="edit-post-form">
-                <div class="post-title-section">
-                    <label for="post-title">Title</label>
-                    <input type="text" name="post-title" id="post-title" value="{{post.title}}" />
+                <div class="m-4 post-title-section">
+                    <label class="is-size-4 is-flex is-justify-content-center" for="post-title">Title</label>
+                    <input class="input" type="text" name="post-title" id="post-title" value="{{post.title}}" />
                 </div>
-                <div class="post-content">
-                    <label for="post-content">Content</label>
-                    <textarea class="entry-field" id="post-content" name="post-content">{{post.content}}</textarea>
+                <div class="m-4 post-content">
+                    <label class="is-size-4 is-flex is-justify-content-center" for="post-content">Content</label>
+                    <textarea class="entry-field textarea" id="post-content"
+                        name="post-content">{{post.content}}</textarea>
                 </div>
-                <button type="submit">Update post</button>
-                <button type="button" class="delete-post-btn">Delete post</button>
+                <div class="is-flex is-justify-content-center is-justify-content-space-evenly m-3">
+                    <button class="button is-black" type="submit">Update post</button>
+                    <button type="button" class="button is-black delete-post-btn">Delete post</button>
+                </div>
             </form>
         </div>
     </section>

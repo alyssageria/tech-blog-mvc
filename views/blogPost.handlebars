@@ -6,7 +6,6 @@
             <p>Created by {{user.username}} on {{formatDate post.created_at}}</p>
         </div>
         <p class="is-size-5 my-4">{{post.post_content}}</p>
-        <a href="/dashboard/edit/{{id}}" </div>
     </div>
 
 
@@ -21,20 +20,15 @@
         </div>
     </form>
     {{/if}}
-    {{#each comments}}
-    <div class="comments">
-        {{#each this}}
-        <section class="comment">
-            <div class="meta">
-                {{user.username}} on {{created_at}}
+
+    <section class="box m-3">
+        <h4 class="is-size-3 has-text-centered">Comments</h2>
+            {{#each post.comments as |comment|}}
+            <div class="is-flex is-justify-content-space-between has-background-success-light m-2">
+                <p class="p-2">{{comment_text}}.</p>
+                <p class="cursive text-mutted p-2"> {{user.username}} on {{formatDate created_at}}</p>
             </div>
-            <div class="text">
-                {{comment_text}}
-            </div>
-        </section>
-        {{/each}}
-    </div>
-    {{/each}}
-    {{#if loggedIn}}
+            {{/each}}
+    </section>
+
     <script src="/js/comment.js"></script>
-    {{/if}}
