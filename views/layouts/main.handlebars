@@ -17,12 +17,12 @@
         </header>
         <nav class="is-flex is-align-items-center">
             {{#if loggedIn}}
-            <a href="/" class="is-size-3">Home</a>
-            <a href="/dashboard" class="is-size-3">Dashboard</a>
-            <button id="logout">Logout</button>
+            <a href="/" class="button is-success is-light is-medium m-3">Home</a>
+            <a href="/dashboard" class="button is-success is-light is-medium m-3">Dashboard</a>
+            <button id="logout" class="button is-success is-light is-medium m-3">Logout</button>
             {{else}}
-            <a href="/login" class="is-size-2 p-3">Login</a>
-            <a href="/signup" class="is-size-2 p-3">Signup</a>
+            <a href="/login" class="button is-success is-light is-medium m-3">Login</a>
+            <a href="/signup" class="button is-success is-light is-medium m-3">Signup</a>
             {{/if}}
         </nav>
     </div>

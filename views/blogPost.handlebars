@@ -1,39 +1,40 @@
 <div class="box">
-    <div class="is-flex is-justify-content-space-between has-background-black has-text-white p-2">
-        <a href="/post/{{id}}" class="links">{{post.title}}</a>
-        <p>Created by {{user.username}} on {{formatDate post.created_at}}</p>
-    </div>
-    <p>{{post.post_content}}</p>
-    <a href="/dashboard/edit/{{id}}" class="edit-link">Edit Post</a>
-    <p>{{id}}</p>
-</div>
-
-
-{{#if loggedIn}}
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
-    </div>
-
-    <div>
-        <button type="submit">add comment</button>
-    </div>
-</form>
-{{/if}}
-{{#each comments}}
-<div class="comments">
-    {{#each this}}
-    <section class="comment">
-        <div class="meta">
-            {{user.username}} on {{created_at}}
+    <div class="box">
+        <div
+            class="is-flex is-justify-content-space-between is-align-items-center has-background-black has-text-white p-2">
+            <a href="/post/{{id}}" class="links has-text-white is-size-4">{{post.title}}</a>
+            <p>Created by {{user.username}} on {{formatDate post.created_at}}</p>
         </div>
-        <div class="text">
-            {{comment_text}}
+        <p class="is-size-5 my-4">{{post.post_content}}</p>
+        <a href="/dashboard/edit/{{id}}" </div>
+    </div>
+
+
+    {{#if loggedIn}}
+    <form class="comment-form">
+        <div>
+            <textarea class="textarea" name="comment-body"></textarea>
         </div>
-    </section>
+
+        <div class="is-flex is-justify-content-center m-3">
+            <button type="submit" class="button is-black">add comment</button>
+        </div>
+    </form>
+    {{/if}}
+    {{#each comments}}
+    <div class="comments">
+        {{#each this}}
+        <section class="comment">
+            <div class="meta">
+                {{user.username}} on {{created_at}}
+            </div>
+            <div class="text">
+                {{comment_text}}
+            </div>
+        </section>
+        {{/each}}
+    </div>
     {{/each}}
-</div>
-{{/each}}
-{{#if loggedIn}}
-<script src="/js/comment.js"></script>
-{{/if}}
+    {{#if loggedIn}}
+    <script src="/js/comment.js"></script>
+    {{/if}}
