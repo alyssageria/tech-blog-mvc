@@ -24,10 +24,10 @@ router.get('/', withAuth, async (req, res) => {
 
         const posts = postData.map((post) => post.get({ plain: true }));
 
-        console.log(posts)
         res.render('dashboard', {
             posts,
-            loggedIn: true
+            username: req.session.username,
+            loggedIn: req.session.loggedIn
         });
     } catch (err) {
         console.log(err);
@@ -36,9 +36,10 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 // GET '/dashboard/new' - renders the page to create a new blog post
-router.get('/new', (req, res) => {
+router.get('/new', withAuth, (req, res) => {
     res.render('newBlogPost', {
-        loggedIn: true
+        user_id: req.session.user_id,
+        loggedIn: req.session.loggedIn
     })
 })
 
@@ -84,7 +85,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
         res.render('editBlogPost', {
             post,
-            loggedIn: true
+            loggedIn: req.session.loggedIn
         });
     } catch (err) {
         console.log(err);

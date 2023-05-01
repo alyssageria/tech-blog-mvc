@@ -74,7 +74,7 @@ router.get('/post/:id', async (req, res) => {
         const post = (await postData).get({ plain: true })
 
         res.render('blogPost', {
-            post,
+            ...post,
             loggedIn: req.session.loggedIn
         })
 
