@@ -30,4 +30,6 @@ N/A
 ## Questions
 If you have any questions my github is [alyssageria](https://github.com/alyssageria/) and you can contact me at alyssageria@gmail.com.
 
-![screenshot](/utils/images/README-screenshot.png)
+![screenshot](./public/images/Screenshot%202023-05-02%20075834.png)
+![screenshot](./public/images/Screenshot%202023-05-02%20075901.png)
+![screenshot](./public/images/Screenshot%202023-05-02%20075922.png)
